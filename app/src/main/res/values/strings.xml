@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Budget_Buddy</string>
+    <string name="currency_prompt">Choose the Currency</string>
+
+    <string-array name="currency_arrays">
+        <item>USD</item>
+        <item>CAD</item>
+        <item>EURO</item>
+        <item>INR</item>
+
+    </string-array>
 </resources>
