@@ -49,6 +49,7 @@ public class EditnDeleteRecord extends AppCompatActivity implements View.OnClick
         sqLiteDatabase = dbHelper.getWritableDatabase();
         contentValues = new ContentValues();
         setEditTexts();
+
     }
 
     @Override
