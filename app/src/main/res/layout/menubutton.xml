@@ -9,12 +9,13 @@
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:id="@+id/btnMenu"
-        android:background="@color/generalBackground"
+        android:background="#2C7873"
         android:layout_margin="2dp"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
 
         />
+
 
 
 </RelativeLayout>
