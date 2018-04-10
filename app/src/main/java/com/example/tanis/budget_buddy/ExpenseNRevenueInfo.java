@@ -9,12 +9,12 @@ public class ExpenseNRevenueInfo {
     String description,currency,month;
     Double amount;
 
-    ExpenseNRevenueInfo(String description,Double amount,String currency)
+    ExpenseNRevenueInfo(String description,Double amount,String currency, String month)
     {
         this.description = description;
         this.amount = amount;
         this.currency = currency;
-//        this.month = month;
+        this.month = month;
     }
 
     public void setAmount(Double amount) {
@@ -29,6 +29,10 @@ public class ExpenseNRevenueInfo {
         this.currency = currency;
     }
 
+    public void setMonth (String month) {
+        this.month = month;
+    }
+
     public Double getAmount() {
         return amount;
     }
@@ -40,4 +44,6 @@ public class ExpenseNRevenueInfo {
     public String getDescription() {
         return description;
     }
+
+    public String getMonth () {return month;}
 }

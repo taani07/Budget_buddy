@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/money1"
     tools:context="com.example.tanis.budget_buddy.CreateRevenue">
 
 
@@ -52,9 +52,12 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnAddRevenue"
             android:layout_centerInParent="true"
+            android:background="#6FB98F"
 
             android:text="Add Revenue"
             />
     </LinearLayout>
+
+
 
 </RelativeLayout>

@@ -48,6 +48,7 @@ public class ListExpenses extends AppCompatActivity {
                 intent = new Intent(ListExpenses.this,EditnDeleteRecord.class);
                 intent.putExtra("description",expenses.get(position).getDescription());
                 intent.putExtra("type",type);
+                intent.putExtra("date",month);
                 startActivity(intent);
 
             }});
@@ -56,16 +57,16 @@ public class ListExpenses extends AppCompatActivity {
     public void addItemsToList()
     {
          cursor = sqLiteDatabase.query("expensensummary", new String[] { "description",
-                "amount", "currency"}, "type = ?", new String[] {type}, null, null, null);
+                "amount", "currency", "date"}, "type = ?", new String[] {type}, null, null, null);
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             // do what you need with the cursor here
             description = cursor.getString(0);
             amount = Double.parseDouble(cursor.getString(1));
             currency = cursor.getString(2);
-//            month = cursor.getString(3);
+            month = cursor.getString(3);
             //month=" ";
-            expenseNRevenueInfo = new ExpenseNRevenueInfo(description, amount, currency);
+            expenseNRevenueInfo = new ExpenseNRevenueInfo(description, amount, currency, month);
             expenses.add(expenseNRevenueInfo);
         }
 

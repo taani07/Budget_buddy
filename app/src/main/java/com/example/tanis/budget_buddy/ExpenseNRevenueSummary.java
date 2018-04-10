@@ -14,7 +14,7 @@ public class ExpenseNRevenueSummary extends AppCompatActivity {
     TextView txtSummary2;
     Cursor cursor;
     DBHelper dbHelper;
-    String type,summary="";
+    String type,summary="",month;
     Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +26,16 @@ public class ExpenseNRevenueSummary extends AppCompatActivity {
         sqLiteDatabase = dbHelper.getWritableDatabase();
         intent = getIntent();
         type = intent.getStringExtra("type");
-        cursor = sqLiteDatabase.query("expensensummary", new String[] {
-                "sum(amount)", "currency"}, "type = ?", new String[] {type}, "currency", null, null);
 
+//        cursor = sqLiteDatabase.query("expensensummary", new String[] {
+//                "sum(amount)", "currency"}, "type = Expense", null, "currency", null, null);
+
+        cursor = sqLiteDatabase.query("expensensummary", new String[] {
+                "sum(amount)", "currency","date"}, "type = ?", new String[] {type}, "date", null, null);
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             // do what you need with the cursor here
-            summary  =summary + cursor.getString(0)+" " +(cursor.getString(1)) +"\n";
+            summary  =summary + cursor.getString(0)+" " +(cursor.getString(1))+ " "
+                    + (cursor.getString(2))+ "\n";
 //            currency = cursor.getString(2);
 //            expenseNRevenueInfo = new ExpenseNRevenueInfo(description, amount, currency);
 //            expenses.add(expenseNRevenueInfo);

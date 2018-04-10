@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/money1"
     tools:context="com.example.tanis.budget_buddy.CreateExpense">
 
     <Button
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnDelete"
         android:text="Delete"
+        android:background="#6FB98F"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:visibility="invisible"/>
@@ -73,10 +74,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnAddExpense"
+            android:background="#6FB98F"
             android:layout_centerInParent="true"
 
             android:text="Add Expense"
         />
     </LinearLayout>
+    <TextView
+        android:id="@+id/month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="73dp"
+        />
+
 
 </RelativeLayout>

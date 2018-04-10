@@ -73,6 +73,9 @@ public class EditnDeleteRecord extends AppCompatActivity implements View.OnClick
     {
         cursor = sqLiteDatabase.query("expensensummary", new String[] { "description",
                 "amount", "currency"}, "type = ? AND description = ?", new String[] {type,desc}, null, null, null);
+
+
+
         if(cursor.moveToFirst()){
             edtTxtDesc.setText(desc);
             edtTxtAmount.setText(cursor.getString(1));

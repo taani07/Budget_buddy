@@ -62,8 +62,8 @@ public class CustomListAdapter extends BaseAdapter {
         TextView currency = (TextView) convertView.findViewById(R.id.txtCurrency);
         currency.setText(listExpensesNRevenue.get(position).getCurrency());
 //
-//        TextView month = (TextView) convertView.findViewById(R.id.txtMonth);
-//        month.setText(listExpensesNRevenue.get(position).getMonth());
+        TextView month = (TextView) convertView.findViewById(R.id.txtMonth);
+        month.setText(listExpensesNRevenue.get(position).getMonth());
         return convertView;
     }
 }

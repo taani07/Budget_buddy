@@ -10,14 +10,16 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class CreateExpense extends AppCompatActivity {
 
+    TextView month;
     EditText edtTxtDesc,edtTxtAmount;
-    Spinner spinnerCurrencySelector;
+    Spinner spinnerCurrencySelector, dateselector;
     Button btnAddExpense;
-    String desc,amount,currency,datevalue;
+  public  String desc,amount,currency,datevalue,monthValue;
     DBHelper dbHelper;
     SQLiteDatabase sqLiteDatabase;
     ContentValues contentValues;
@@ -28,11 +30,12 @@ public class CreateExpense extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_expense);
         intent = getIntent();
+        month = (TextView) findViewById(R.id.month);
         type = intent.getStringExtra("type");
         edtTxtAmount = (EditText)findViewById(R.id.editTxtAmount);
         edtTxtDesc = (EditText)findViewById(R.id.editTxtDesc);
         spinnerCurrencySelector= (Spinner)findViewById(R.id.spinnerCurrency);
-       // dateselector= (Spinner)findViewById(R.id.date);
+       dateselector= (Spinner)findViewById(R.id.date);
         btnAddExpense = (Button) findViewById(R.id.btnAddExpense);
         btnAddExpense.setText("Add "+type);
         dbHelper = new DBHelper(getApplicationContext());
@@ -45,18 +48,23 @@ public class CreateExpense extends AppCompatActivity {
                 desc = edtTxtDesc.getText().toString();
                 amount = edtTxtAmount.getText().toString();
                 currency = spinnerCurrencySelector.getSelectedItem().toString();
-               // datevalue = dateselector.getSelectedItem().toString();
+
                 contentValues.put("description",desc);
                 contentValues.put("amount",amount);
                 contentValues.put("currency",currency);
                 contentValues.put("type",type);
-               // contentValues.put("date",datevalue);
+                datevalue = dateselector.getSelectedItem().toString();
+               // month.setText(datevalue);
+               contentValues.put("date",datevalue);
                 sqLiteDatabase.insert("expensensummary", null, contentValues);
                 contentValues.clear();
                 Toast.makeText(getApplicationContext(), type+" Added", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(CreateExpense.this,MainActivity.class));
             }
         });
+
+
+
 
     }
 }
