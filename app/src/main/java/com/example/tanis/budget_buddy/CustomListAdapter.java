@@ -57,7 +57,7 @@ public class CustomListAdapter extends BaseAdapter {
         desc.setText(listExpensesNRevenue.get(position).getDescription());
 
         TextView amount = (TextView) convertView.findViewById(R.id.txtAmount);
-        amount.setText(listExpensesNRevenue.get(position).getAmount().toString());
+        amount.setText(String.valueOf(listExpensesNRevenue.get(position).getAmount()));
 
         TextView currency = (TextView) convertView.findViewById(R.id.txtCurrency);
         currency.setText(listExpensesNRevenue.get(position).getCurrency());

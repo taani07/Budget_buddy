@@ -36,6 +36,7 @@ public class ListExpenses extends AppCompatActivity {
         sqLiteDatabase = dbHelper.getWritableDatabase();
         addItemsToList();
 
+
         CustomListAdapter customListAdapter = new CustomListAdapter(getApplicationContext(),expenses);
         listExpenses.setAdapter(customListAdapter);
 

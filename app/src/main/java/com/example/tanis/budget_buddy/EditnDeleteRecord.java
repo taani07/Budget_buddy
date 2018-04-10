@@ -19,7 +19,7 @@ public class EditnDeleteRecord extends AppCompatActivity implements View.OnClick
 
     Button btnDelete;
     EditText edtTxtDesc,edtTxtAmount;
-    Spinner spinnerCurrencySelector;
+    Spinner spinnerCurrencySelector, spinnerDateSelector;
     Button btnAddExpense;
     Intent intent;
     String type,desc;
@@ -36,6 +36,7 @@ public class EditnDeleteRecord extends AppCompatActivity implements View.OnClick
         edtTxtDesc = (EditText) findViewById(R.id.editTxtDesc);
         edtTxtAmount = (EditText)findViewById(R.id.editTxtAmount);
         spinnerCurrencySelector = (Spinner) findViewById(R.id.spinnerCurrency);
+        spinnerDateSelector = (Spinner) findViewById(R.id.date);
         btnAddExpense = (Button) findViewById(R.id.btnAddExpense);
         btnDelete.setVisibility(View.VISIBLE);
         intent = getIntent();
@@ -101,6 +102,7 @@ public class EditnDeleteRecord extends AppCompatActivity implements View.OnClick
 
         contentValues.put("amount",edtTxtAmount.getText().toString());
         contentValues.put("currency",spinnerCurrencySelector.getSelectedItem().toString());
+        contentValues.put("date", spinnerDateSelector.getSelectedItem().toString());
 
         sqLiteDatabase.update("expensensummary", contentValues,
                 "type = ? AND description = ?", new String[] {type,desc});
