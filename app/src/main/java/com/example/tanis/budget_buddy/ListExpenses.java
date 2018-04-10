@@ -20,7 +20,7 @@ public class ListExpenses extends AppCompatActivity {
     SQLiteDatabase sqLiteDatabase;
     DBHelper dbHelper;
     Cursor cursor;
-    String description,currency;
+    String description,currency,month;
     Double amount;
     ExpenseNRevenueInfo expenseNRevenueInfo;
     Intent intent;
@@ -56,13 +56,15 @@ public class ListExpenses extends AppCompatActivity {
     public void addItemsToList()
     {
          cursor = sqLiteDatabase.query("expensensummary", new String[] { "description",
-                "amount", "currency"}, "type = ?", new String[] {type}, null, null, null);
+                "amount", "currency","month"}, "type = ?", new String[] {type}, null, null, null);
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             // do what you need with the cursor here
             description = cursor.getString(0);
             amount = Double.parseDouble(cursor.getString(1));
             currency = cursor.getString(2);
+//            month = cursor.getString(3);
+            month=" ";
             expenseNRevenueInfo = new ExpenseNRevenueInfo(description, amount, currency);
             expenses.add(expenseNRevenueInfo);
         }

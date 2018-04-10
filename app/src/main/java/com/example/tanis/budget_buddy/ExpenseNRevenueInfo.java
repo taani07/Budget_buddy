@@ -6,13 +6,15 @@ package com.example.tanis.budget_buddy;
 
 public class ExpenseNRevenueInfo {
 
-    String description,currency;
+    String description,currency,month;
     Double amount;
+
     ExpenseNRevenueInfo(String description,Double amount,String currency)
     {
         this.description = description;
         this.amount = amount;
         this.currency = currency;
+//        this.month = month;
     }
 
     public void setAmount(Double amount) {

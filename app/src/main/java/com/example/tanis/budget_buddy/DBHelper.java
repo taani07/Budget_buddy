@@ -21,7 +21,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("create table expensensummary\n" +
-                "                                 (  description text,amount real ,currency text,type text);");
+                "                                 (  description text,amount real ,currency text,type text,month text);");
 
     }
 
