@@ -9,4 +9,21 @@
         <item>INR</item>
 
     </string-array>
+    <string name="date">Month</string>
+    <string-array name="Months_list">
+        <item>April</item>
+        <item>Fab</item>
+        <item>March</item>
+        <item>Jan</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>Aug</item>
+        <item>Sept</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+
+
+    </string-array>
 </resources>

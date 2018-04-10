@@ -29,6 +29,7 @@
             android:id="@+id/editTxtDesc"
             android:hint="Description"/>
 
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,7 +55,19 @@
             android:id="@+id/editTxtAmount"
             android:hint="Amount"/>
 
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date"
+                android:layout_marginLeft="20dp"
+                android:prompt="@string/date"
+                android:entries="@array/Months_list"
+                >
+
+            </Spinner>
+
         </LinearLayout>
+
 
         <Button
             android:layout_width="wrap_content"

@@ -15,9 +15,9 @@ import android.widget.Toast;
 public class CreateExpense extends AppCompatActivity {
 
     EditText edtTxtDesc,edtTxtAmount;
-    Spinner spinnerCurrencySelector;
+    Spinner spinnerCurrencySelector,dateselector;
     Button btnAddExpense;
-    String desc,amount,currency;
+    String desc,amount,currency,datevalue;
     DBHelper dbHelper;
     SQLiteDatabase sqLiteDatabase;
     ContentValues contentValues;
@@ -32,6 +32,7 @@ public class CreateExpense extends AppCompatActivity {
         edtTxtAmount = (EditText)findViewById(R.id.editTxtAmount);
         edtTxtDesc = (EditText)findViewById(R.id.editTxtDesc);
         spinnerCurrencySelector= (Spinner)findViewById(R.id.spinnerCurrency);
+        dateselector= (Spinner)findViewById(R.id.date);
         btnAddExpense = (Button) findViewById(R.id.btnAddExpense);
         btnAddExpense.setText("Add "+type);
         dbHelper = new DBHelper(getApplicationContext());
@@ -44,10 +45,12 @@ public class CreateExpense extends AppCompatActivity {
                 desc = edtTxtDesc.getText().toString();
                 amount = edtTxtAmount.getText().toString();
                 currency = spinnerCurrencySelector.getSelectedItem().toString();
+                datevalue = dateselector.getSelectedItem().toString();
                 contentValues.put("description",desc);
                 contentValues.put("amount",amount);
                 contentValues.put("currency",currency);
                 contentValues.put("type",type);
+                contentValues.put("date",datevalue);
                 sqLiteDatabase.insert("expensensummary", null, contentValues);
                 contentValues.clear();
                 Toast.makeText(getApplicationContext(), type+" Added", Toast.LENGTH_SHORT).show();
