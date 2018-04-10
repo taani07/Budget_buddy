@@ -56,7 +56,7 @@ public class ListExpenses extends AppCompatActivity {
     public void addItemsToList()
     {
          cursor = sqLiteDatabase.query("expensensummary", new String[] { "description",
-                "amount", "currency","month"}, "type = ?", new String[] {type}, null, null, null);
+                "amount", "currency"}, "type = ?", new String[] {type}, null, null, null);
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
             // do what you need with the cursor here
@@ -64,7 +64,7 @@ public class ListExpenses extends AppCompatActivity {
             amount = Double.parseDouble(cursor.getString(1));
             currency = cursor.getString(2);
 //            month = cursor.getString(3);
-            month=" ";
+            //month=" ";
             expenseNRevenueInfo = new ExpenseNRevenueInfo(description, amount, currency);
             expenses.add(expenseNRevenueInfo);
         }
