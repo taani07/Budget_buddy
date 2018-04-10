@@ -30,7 +30,7 @@ public class CreateExpense extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_expense);
         intent = getIntent();
-        month = (TextView) findViewById(R.id.month);
+       // month = (TextView) findViewById(R.id.month);
         type = intent.getStringExtra("type");
         edtTxtAmount = (EditText)findViewById(R.id.editTxtAmount);
         edtTxtDesc = (EditText)findViewById(R.id.editTxtDesc);

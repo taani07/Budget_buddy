@@ -32,7 +32,7 @@ public class ExpenseNRevenueSummary extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expense_nrevenue_summary);
         txtSummary = (ListView)findViewById(R.id.txtSummary);
-       // txtSummary2 = (TextView)findViewById(R.id.txtSummary2);
+
         dbHelper = new DBHelper(getApplicationContext());
         sqLiteDatabase = dbHelper.getWritableDatabase();
         intent = getIntent();
@@ -42,8 +42,7 @@ public class ExpenseNRevenueSummary extends AppCompatActivity {
 
         CustomListAdapter customListAdapter = new CustomListAdapter(getApplicationContext(),expenses);
         txtSummary.setAdapter(customListAdapter);
-//        cursor = sqLiteDatabase.query("expensensummary", new String[] {
-//                "sum(amount)", "currency"}, "type = Expense", null, "currency", null, null);
+
 
     }
 
@@ -51,8 +50,7 @@ public class ExpenseNRevenueSummary extends AppCompatActivity {
     {  cursor = sqLiteDatabase.query("expensensummary", new String[] {
                 "sum(amount)", "currency","date"}, "type = ?", new String[] {type}, "date", null, null);
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-            // do what you need with the cursor here
-            //description = cursor.getString(0);
+
             amount = Double.parseDouble(cursor.getString(0));
             currency = cursor.getString(1);
             month = cursor.getString(2);

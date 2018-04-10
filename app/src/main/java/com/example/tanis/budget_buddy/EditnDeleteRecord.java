@@ -81,15 +81,7 @@ public class EditnDeleteRecord extends AppCompatActivity implements View.OnClick
             edtTxtDesc.setText(desc);
             edtTxtAmount.setText(cursor.getString(1));
 
-            //implement spinner selection
-//            spinnerCurrencySelector.setSe
-//            SimpleCursorAdapter adapter = (SimpleCursorAdapter) spinnerCurrencySelector.getAdapter();
-//            for (int position = 0; position < adapter.getCount(); position++) {
-//                if(spinnerCurrencySelector.getItemAtPosition(position).toString() == cursor.getString(2)) {
-//                    spinnerCurrencySelector.setSelection(position);
-//                    break;
-//                }
-//            }
+
 
         }
 

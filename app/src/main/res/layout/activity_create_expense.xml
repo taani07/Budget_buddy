@@ -8,27 +8,13 @@
     android:background="@drawable/background"
     tools:context="com.example.tanis.budget_buddy.CreateExpense">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnDelete"
-        android:text="Delete"
-        android:background="#6FB98F"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:visibility="invisible"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_centerInParent="true">
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/editTxtDesc"
-            android:hint="Description"/>
+        android:layout_centerInParent="true"
+        android:id="@+id/linearLayout">
 
 
         <LinearLayout
@@ -69,25 +55,39 @@
 
         </LinearLayout>
 
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnAddExpense"
-            android:background="#6FB98F"
-            android:layout_centerInParent="true"
-
-            android:text="Add Expense"
-        />
     </LinearLayout>
-    <TextView
-        android:id="@+id/month"
+
+
+    <Button
+        android:id="@+id/btnAddExpense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="73dp"
-        />
+        android:layout_marginTop="46dp"
+        android:background="#009688"
+        android:text="Add Expense" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignBaseline="@+id/btnAddExpense"
+        android:layout_alignBottom="@+id/btnAddExpense"
+        android:layout_alignStart="@+id/linearLayout"
+        android:background="#6FB98F"
+        android:text="Delete"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/editTxtDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:hint="Description" />
 
 
 </RelativeLayout>

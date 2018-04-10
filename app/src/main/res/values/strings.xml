@@ -7,22 +7,27 @@
         <item>CAD</item>
         <item>EURO</item>
         <item>INR</item>
+        <item>MNG</item>
+        <item>AUD</item>
+        <item>DNR</item>
+        <item>YMN</item>
 
     </string-array>
     <string name="date">Month</string>
     <string-array name="Months_list">
-        <item>April</item>
-        <item>Fab</item>
-        <item>March</item>
-        <item>Jan</item>
-        <item>May</item>
-        <item>June</item>
-        <item>July</item>
-        <item>Aug</item>
-        <item>Sept</item>
-        <item>Oct</item>
-        <item>Nov</item>
-        <item>Dec</item>
+        <item name="0">Month</item>
+        <item name="1">Jan</item>
+        <item name="2">feb</item>
+        <item name="3">March</item>
+        <item name="4">April</item>
+        <item name="5">May</item>
+        <item name="6">June</item>
+        <item name="7">July</item>
+        <item name="8">Aug</item>
+        <item name="9">Sept</item>
+        <item name="10">Oct</item>
+        <item name="11">Nov</item>
+        <item name="12">Dec</item>
 
 
     </string-array>
