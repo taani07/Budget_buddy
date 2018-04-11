@@ -33,6 +33,7 @@ public class ExpenseNRevenueSummary extends AppCompatActivity {
         setContentView(R.layout.activity_expense_nrevenue_summary);
         txtSummary = (ListView)findViewById(R.id.txtSummary);
 
+       //citation[1]
         dbHelper = new DBHelper(getApplicationContext());
         sqLiteDatabase = dbHelper.getWritableDatabase();
         intent = getIntent();
