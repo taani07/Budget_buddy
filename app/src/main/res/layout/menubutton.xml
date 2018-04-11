@@ -11,7 +11,7 @@
         android:id="@+id/btnMenu"
         android:background="#66A5AD"
         android:layout_margin="2dp"
-        android:textAlignment="center"
+        android:gravity="center"
         android:textSize="20dp"
         android:textColor="@color/colorBlack"
 

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         >
-
+        <!--Citation[2]-->
         <TextView
             android:id="@+id/text12"
             android:layout_width="wrap_content"
