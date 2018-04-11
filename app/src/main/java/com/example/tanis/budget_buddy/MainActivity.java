@@ -42,7 +42,7 @@ public class MainActivity extends Activity{
                         intent = new Intent(MainActivity.this,CreateExpense.class);
                         intent.putExtra(TYPE,"Expense");
                         startActivity(intent);
-//                        startActivity(new Intent(MainActivity.this,CreateExpense.class));
+
                      //   Toast.makeText(getApplicationContext(), "in case 0", Toast.LENGTH_LONG).show();
                         break;
 
@@ -50,13 +50,13 @@ public class MainActivity extends Activity{
                         intent = new Intent(MainActivity.this,CreateExpense.class);
                         intent.putExtra(TYPE,"Revenue");
                         startActivity(intent);
-//                        startActivity(new Intent(MainActivity.this,CreateExpense.class));
+
                       //  Toast.makeText(getApplicationContext(), "in case 0", Toast.LENGTH_LONG).show();
                         break;
 
                     case 2:
                         intent = new Intent(MainActivity.this,ListExpenses.class);
-//                        startActivity(new Intent(MainActivity.this,ListExpenses.class));
+
 //                        Toast.makeText(getApplicationContext(), "in case 2", Toast.LENGTH_LONG).show();
                         intent.putExtra(TYPE,"Expense");
                         startActivity(intent);
@@ -64,7 +64,7 @@ public class MainActivity extends Activity{
 
                     case 3:
                         intent = new Intent(MainActivity.this,ListExpenses.class);
-//                        startActivity(new Intent(MainActivity.this,ListExpenses.class));
+
 //                        Toast.makeText(getApplicationContext(), "in case 2", Toast.LENGTH_LONG).show();
                         intent.putExtra(TYPE,"Revenue");
                         startActivity(intent);

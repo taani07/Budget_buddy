@@ -20,7 +20,7 @@
     <color name="colorGray">#999999</color>
     <color name="colorMilkWhite">#FAFFF0</color>
     <color name="spacegrey">#fafafa</color>
-    <color name="spaceblue">#09c6df</color>
+    <color name="spaceblue">#66A5AD</color>
     <color name="imageview">#FFCC00</color>
     <color name="generalBackground">#0089C9</color>
     <drawable name="checkbox">#666666</drawable>
@@ -30,10 +30,11 @@
     <color name="reset_psw_btn">#0bc684</color>
     <color name="graylight">#fafafa</color>
     <color name="startblue">#09c6df</color>
-    <color name="endblue">#0bcce6</color>
+    <color name="endblue">#66A5AD</color>
     <color name="colorDividItem">#88d1d4d4</color>
     <color name="joinBtn">#14e233</color>
     <color name="leaveBtn">#ec0d0d</color>
     <color name="colorGainsboro">#dcdcdc</color>
+
 
 </resources>

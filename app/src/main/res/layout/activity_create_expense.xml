@@ -65,19 +65,17 @@
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="46dp"
-        android:background="#009688"
+        android:background="#66A5AD"
         android:text="Add Expense" />
 
     <Button
         android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-
         android:layout_alignBaseline="@+id/btnAddExpense"
         android:layout_alignBottom="@+id/btnAddExpense"
         android:layout_alignStart="@+id/linearLayout"
-        android:background="#6FB98F"
+        android:background="#66A5AD"
         android:text="Delete"
         android:visibility="invisible" />
 
