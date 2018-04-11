@@ -19,7 +19,7 @@ public class CreateExpense extends AppCompatActivity {
     EditText edtTxtDesc,edtTxtAmount;
     Spinner spinnerCurrencySelector, dateselector;
     Button btnAddExpense;
-  public  String desc,amount,currency,datevalue,monthValue;
+    public  String desc,amount,currency,datevalue,monthValue;
     DBHelper dbHelper;
     SQLiteDatabase sqLiteDatabase;
     ContentValues contentValues;
@@ -30,12 +30,12 @@ public class CreateExpense extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_expense);
         intent = getIntent();
-       // month = (TextView) findViewById(R.id.month);
+        // month = (TextView) findViewById(R.id.month);
         type = intent.getStringExtra("type");
         edtTxtAmount = (EditText)findViewById(R.id.editTxtAmount);
         edtTxtDesc = (EditText)findViewById(R.id.editTxtDesc);
         spinnerCurrencySelector= (Spinner)findViewById(R.id.spinnerCurrency);
-       dateselector= (Spinner)findViewById(R.id.date);
+        dateselector= (Spinner)findViewById(R.id.date);
         btnAddExpense = (Button) findViewById(R.id.btnAddExpense);
         btnAddExpense.setText("Add "+type);
         dbHelper = new DBHelper(getApplicationContext());
@@ -48,7 +48,7 @@ public class CreateExpense extends AppCompatActivity {
                 desc = edtTxtDesc.getText().toString();
                 amount = edtTxtAmount.getText().toString();
                 currency = spinnerCurrencySelector.getSelectedItem().toString();
-
+   //Pushing the values in database
                 contentValues.put("description",desc);
                 contentValues.put("amount",amount);
                 contentValues.put("currency",currency);
@@ -58,7 +58,7 @@ public class CreateExpense extends AppCompatActivity {
                contentValues.put("date",datevalue);
                 sqLiteDatabase.insert("expensensummary", null, contentValues);
                 contentValues.clear();
-                Toast.makeText(getApplicationContext(), type+" Added", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), type+"Data Added", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(CreateExpense.this,MainActivity.class));
             }
         });

@@ -40,6 +40,7 @@ public class CreateRevenue extends AppCompatActivity {
                 desc = edtTxtDesc.getText().toString();
                 amount = edtTxtAmount.getText().toString();
                 currency = spinnerCurrencySelector.getSelectedItem().toString();
+                //Pushing the values in database
                 contentValues.put("description",desc);
                 contentValues.put("amount",amount);
                 contentValues.put("currency",currency);

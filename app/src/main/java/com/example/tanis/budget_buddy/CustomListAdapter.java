@@ -22,7 +22,7 @@ public class CustomListAdapter extends BaseAdapter {
     private List<ExpenseNRevenueInfo> listExpensesNRevenue;
     int count;
     LayoutInflater inflater;
-
+ //adapter for pushing the data in the listview
     public CustomListAdapter(Context contxt, List<ExpenseNRevenueInfo> listExpensesNRevenue)
     {
         this.contxt = contxt;
@@ -61,7 +61,7 @@ public class CustomListAdapter extends BaseAdapter {
 
         TextView currency = (TextView) convertView.findViewById(R.id.txtCurrency);
         currency.setText(listExpensesNRevenue.get(position).getCurrency());
-//
+
         TextView month = (TextView) convertView.findViewById(R.id.txtMonth);
         month.setText(listExpensesNRevenue.get(position).getMonth());
         return convertView;

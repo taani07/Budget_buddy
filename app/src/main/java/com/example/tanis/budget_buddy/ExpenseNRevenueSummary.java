@@ -43,8 +43,6 @@ public class ExpenseNRevenueSummary extends AppCompatActivity {
 
         CustomListAdapter customListAdapter = new CustomListAdapter(getApplicationContext(),expenses);
         txtSummary.setAdapter(customListAdapter);
-
-
     }
 
     public void addItemsToList()

@@ -35,7 +35,7 @@ public class MainActivity extends Activity{
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "in Item click", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getApplicationContext(), "in Item click", Toast.LENGTH_SHORT).show();
                 switch (position)
                 {
                     case 0:
@@ -43,7 +43,7 @@ public class MainActivity extends Activity{
                         intent.putExtra(TYPE,"Expense");
                         startActivity(intent);
 //                        startActivity(new Intent(MainActivity.this,CreateExpense.class));
-                        Toast.makeText(getApplicationContext(), "in case 0", Toast.LENGTH_LONG).show();
+                     //   Toast.makeText(getApplicationContext(), "in case 0", Toast.LENGTH_LONG).show();
                         break;
 
                     case 1:
@@ -51,7 +51,7 @@ public class MainActivity extends Activity{
                         intent.putExtra(TYPE,"Revenue");
                         startActivity(intent);
 //                        startActivity(new Intent(MainActivity.this,CreateExpense.class));
-                        Toast.makeText(getApplicationContext(), "in case 0", Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(), "in case 0", Toast.LENGTH_LONG).show();
                         break;
 
                     case 2:

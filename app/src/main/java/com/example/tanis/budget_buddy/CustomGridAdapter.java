@@ -21,6 +21,7 @@ public class CustomGridAdapter extends BaseAdapter {
     int count;
     LayoutInflater inflater;
 
+    //adapter for Grid View
     public CustomGridAdapter(Context contxt, String[] items)
     {
         this.contxt = contxt;

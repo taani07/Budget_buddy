@@ -45,7 +45,7 @@ public class ListExpenses extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
-                Toast.makeText(getApplicationContext(), "in Item click", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getApplicationContext(), "in Item click", Toast.LENGTH_SHORT).show();
                 intent = new Intent(ListExpenses.this,EditnDeleteRecord.class);
                 intent.putExtra("description",expenses.get(position).getDescription());
                 intent.putExtra("type",type);

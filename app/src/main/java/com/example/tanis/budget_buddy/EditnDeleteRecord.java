@@ -69,7 +69,7 @@ public class EditnDeleteRecord extends AppCompatActivity implements View.OnClick
         }
 
     }
-
+     //Citation[1]
     public void setEditTexts()
     {
         cursor = sqLiteDatabase.query("expensensummary", new String[] { "description",
